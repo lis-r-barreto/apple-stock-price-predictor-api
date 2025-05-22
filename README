@@ -52,7 +52,7 @@ This project provides a FastAPI-based application to predict Apple stock prices 
 2. **Run the Container**:
    ```bash
    docker run -d -p 8000:80 \
-     -v $(pwd)/models:/app/models \
+     -v $(pwd)/model:/app/model \
      -v $(pwd)/data:/data \
      --name stock-prediction-api \
      apple-stock-prediction
@@ -85,7 +85,8 @@ project/
 │   ├── main.py          # FastAPI entry point
 │   ├── routes/          # API routes
 │   ├── utils/           # Utility modules
-│   └── models/          # Pre-trained model files
+│   ├── model/           # Pre-trained model files
+│   └── artifacts/       # Artifacts model files    
 ├── data/                # CSV data directory
 ├── requirements.txt     # Python dependencies
 └── Dockerfile           # Docker configuration
@@ -101,7 +102,7 @@ project/
   ```
 
 - **File Not Found Errors**:
-  Ensure apple_stock.csv and models files exist in the correct paths.
+  Ensure apple_stock.csv and model files exist in the correct paths.
 
 - **Port Already in Use**:
   ```bash
