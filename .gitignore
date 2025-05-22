@@ -62,11 +62,5 @@ build/
 .DS_Store
 Thumbs.db
 
-# Specific to MLflow
-mlruns/
-*.mlmodel
-model/
-artifacts/
-
 # Specific to pytest
 .pytest_cache/
