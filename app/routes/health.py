@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from app.utils.logging_dd import setup_logger
+from utils.logging_dd import setup_logger
 
 logger = setup_logger(name="HealthRoute")
 
