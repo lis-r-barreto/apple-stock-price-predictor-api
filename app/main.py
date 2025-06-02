@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.routes import prediction, health
+from routes import prediction, health
 
 # Inicializa a aplicação FastAPI
 app = FastAPI(
