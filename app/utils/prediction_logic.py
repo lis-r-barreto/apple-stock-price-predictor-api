@@ -1,9 +1,9 @@
 import os
 import numpy as np
 import pandas as pd
-from utils.model_loader import load_lstm_model
-from utils.scaler_loader import load_scaler
-from utils.logging_dd import setup_logger
+from app.utils.model_loader import load_lstm_model
+from app.utils.scaler_loader import load_scaler
+from app.utils.logging_dd import setup_logger
 
 logger = setup_logger(name="PredictionLogic")
 

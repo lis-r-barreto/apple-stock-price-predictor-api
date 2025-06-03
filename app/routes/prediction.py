@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
-from schemas.stock_request import StockDataRequest
-from utils.prediction_logic import predict_prices
-from utils.logging_dd import setup_logger
+from app.schemas.stock_request import StockDataRequest
+from app.utils.prediction_logic import predict_prices
+from app.utils.logging_dd import setup_logger
 
 logger = setup_logger(name="PredictionRoute")
 

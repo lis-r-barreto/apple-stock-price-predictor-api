@@ -1,7 +1,7 @@
 import os
 from tensorflow.keras.models import load_model
 from tensorflow.keras.losses import MeanSquaredError
-from utils.logging_dd import setup_logger
+from app.utils.logging_dd import setup_logger
 
 logger = setup_logger(name="ModelLoader")
 
