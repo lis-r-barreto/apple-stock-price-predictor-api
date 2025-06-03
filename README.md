@@ -46,16 +46,12 @@ This project provides a FastAPI-based application to predict Apple stock prices 
 #### **Steps**
 1. **Build the Docker Image**:
    ```bash
-   docker build -t apple-stock-prediction -f Dockerfile .
+   docker build -t apple-stock-price-predictor-api .
    ```
 
 2. **Run the Container**:
    ```bash
-   docker run -d -p 8000:80 \
-     -v $(pwd)/model:/app/model \
-     -v $(pwd)/data:/data \
-     --name stock-prediction-api \
-     apple-stock-prediction
+   docker run -p 8000:8000 apple-stock-price-predictor-api
    ```
 
 3. **Test the API**:
