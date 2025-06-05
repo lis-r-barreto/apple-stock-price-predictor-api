@@ -112,6 +112,8 @@ project/
 
 ---
 
+---
+
 ## **API Details**
 
 ### **Endpoints**
@@ -131,3 +133,26 @@ project/
       ]
     }
     ```
+- **Metrics**: `GET /metrics`
+  - Response: Metrics in Prometheus format.
+  - Example:
+    ```
+    # HELP request_count Total number of requests received
+    # TYPE request_count counter
+    request_count{method="GET",endpoint="/metrics"} 5
+    # HELP request_latency_seconds Response time per endpoint
+    # TYPE request_latency_seconds histogram
+    request_latency_seconds_bucket{method="GET",endpoint="/metrics",le="0.005"} 3
+    request_latency_seconds_sum{method="GET",endpoint="/metrics"} 0.012
+    request_latency_seconds_count{method="GET",endpoint="/metrics"} 5
+    ```
+
+---
+
+### **Test the Metrics Endpoint**
+You can test the `/metrics` endpoint using `curl`:
+```bash
+curl http://localhost:8000/metrics
+```
+
+If Prometheus is configured correctly, it will scrape this endpoint and display the metrics in its dashboard.
