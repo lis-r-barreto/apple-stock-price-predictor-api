@@ -5,3 +5,5 @@ tensorflow
 numpy
 joblib
 scikit-learn==1.5.2
+prometheus-fastapi-instrumentator
+prometheus_client
